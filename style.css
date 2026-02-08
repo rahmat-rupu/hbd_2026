@@ -236,3 +236,246 @@ footer {
     font-size: 2.5rem;
   }
 }
+/* 🎧 Floating Music Control */
+.music-control {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background: linear-gradient(135deg, #ff4da6, #ff85c2);
+  color: white;
+  padding: 14px 18px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  box-shadow: 0 20px 40px rgba(255, 77, 166, 0.6);
+  z-index: 9999;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.music-control:hover {
+  transform: scale(1.08);
+  box-shadow: 0 25px 60px rgba(255, 133, 194, 0.8);
+}
+
+.music-icon {
+  font-size: 22px;
+  animation: pulse 1.8s infinite;
+}
+
+/* Romantic hover text */
+.music-text {
+  font-size: 14px;
+  white-space: nowrap;
+  opacity: 0;
+  max-width: 0;
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+
+.music-control:hover .music-text {
+  opacity: 1;
+  max-width: 260px;
+}
+
+/* Pulse animation */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.25);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Mobile adjustment */
+@media (max-width: 600px) {
+  .music-text {
+    display: none;
+  }
+}
+/* ===== Scroll Reveal Base ===== */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 1.2s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===== Letter Special Effect ===== */
+.letter-reveal {
+  opacity: 0;
+  transform: scale(0.92);
+  transition: all 1.5s ease;
+}
+
+.letter-reveal.active {
+  opacity: 1;
+  transform: scale(1);
+  box-shadow: 0 0 40px rgba(255, 77, 166, 0.45);
+}
+
+/* ===== Memories One-by-One ===== */
+.memories-grid img {
+  opacity: 0;
+  transform: scale(0.85);
+  transition: all 0.8s ease;
+}
+
+.memories-grid img.show {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* 💌 Handwritten Emotion Mode */
+.letter-box.emotion-active {
+  background: linear-gradient(135deg, #ffe8f0, #fff1f7);
+  box-shadow: 0 0 60px rgba(255, 120, 170, 0.55);
+  transition:
+    box-shadow 1.5s ease,
+    background 1.5s ease;
+}
+
+/* Letter text animation */
+.letter-text span {
+  display: block;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 1s ease;
+}
+
+.letter-text span.show-line {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* 💗 Memories Romantic Line */
+.memories-line {
+  font-size: 1.1rem;
+  opacity: 0.8;
+  margin-bottom: 40px;
+  font-style: italic;
+}
+
+/* 📸 Image Modal */
+.image-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 5, 20, 0.75);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+  z-index: 99999;
+}
+
+.image-modal.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.image-modal img {
+  max-width: 85%;
+  max-height: 85%;
+  border-radius: 25px;
+  box-shadow: 0 40px 100px rgba(255, 77, 166, 0.6);
+  animation: zoomIn 0.6s ease;
+}
+
+.close-modal {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.close-modal:hover {
+  opacity: 1;
+}
+
+/* Zoom animation */
+@keyframes zoomIn {
+  from {
+    transform: scale(0.85);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+/* 🦋 Secret Easter Egg Popup */
+.secret-popup {
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 5, 20, 0.7);
+  backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+  z-index: 99999;
+}
+
+.secret-popup.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.secret-box {
+  background: linear-gradient(135deg, #ffe6f0, #fff1f8);
+  color: #3b0a2a;
+  padding: 35px 40px;
+  border-radius: 30px;
+  max-width: 420px;
+  text-align: center;
+  box-shadow: 0 30px 80px rgba(255, 77, 166, 0.6);
+  animation: popSoft 0.5s ease;
+  position: relative;
+}
+
+.secret-box p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.close-secret {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 26px;
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.close-secret:hover {
+  opacity: 1;
+}
+
+@keyframes popSoft {
+  from {
+    transform: scale(0.85);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

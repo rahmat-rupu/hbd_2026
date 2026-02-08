@@ -16,8 +16,8 @@
   </head>
   <body>
     <!-- MUSIC -->
-    <audio id="bgMusic" autoplay loop>
-      <source src="music/song.mp3" type="audio/mpeg" />
+    <audio id="bgMusic" autoplay muted loop playsinline>
+      <source src="images/music.mp4" type="audio/mpeg" />
     </audio>
 
     <!-- 🌌 Stars -->
@@ -30,7 +30,7 @@
     </div>
 
     <!-- 🎉 Hero Card -->
-    <section class="hero-card">
+    <section class="hero-card reveal">
       <div class="hero-content">
         <div class="hero-text">
           <h1>Happy Birthday Asha</h1>
@@ -50,23 +50,39 @@
 
     <!-- 💌 Letter Section -->
     <section class="letter-section">
-      <div class="letter-box">
+      <div class="letter-box letter-reveal">
         <h2>My Letter For You 💖</h2>
-        <p>
-          সোনা 💜 <br />
-          হ্যাপি বার্থডে । দেখতে দেখতে বাচ্চা মেয়েটার বয়স ২২ বছর হয়ে গেলো ।
-          আরো ৫০০ বছর বেঁচে থাকো আর আল্লাহ্ যেন তোমার সাথে আমাকেও রাখুক সারাজীবন
-          । হাজার বাঁধা বিপত্তির পড় , শত ঝগড়া বিবাদের পর আল্লাহ যেন আমাদের আবার
-          একসাথে মিলিয়ে দেয় । আল্লাহ তোমার আমার আমাদের সব স্বপ্ন পূরণ করুক ।
-          অনেক অনেক বড়ো হও💙 <br /><br />
-          তোমার, <br />রুপু
+        <p class="letter-text">
+          <span>সোনা 💜</span><br />
+          <span
+            >হ্যাপি বার্থডে । দেখতে দেখতে বাচ্চা মেয়েটার বয়স ২২ বছর হয়ে গেলো
+            ।</span
+          ><br />
+          <span
+            >আরো ৫০০ বছর বেঁচে থাকো আর আল্লাহ্ যেন তোমার সাথে আমাকেও রাখুক
+            সারাজীবন ।</span
+          ><br />
+          <span
+            >হাজার বাঁধা বিপত্তির পড় , শত ঝগড়া বিবাদের পর আল্লাহ যেন আমাদের
+            আবার একসাথে মিলিয়ে দেয় ।</span
+          ><br />
+          <span
+            >আল্লাহ তোমার আমার আমাদের সব স্বপ্ন পূরণ করুক । অনেক অনেক বড়ো
+            হও💙</span
+          ><br /><br />
+          <span>তোমার,</span><br />
+          <span>রুপু</span>
         </p>
       </div>
     </section>
 
     <!-- 📸 Memories Gallery -->
-    <section class="memories">
+    <section class="memories reveal">
       <h2>Memories Together 📷</h2>
+      <p class="memories-line">
+        Every picture here holds a piece of my heart 💗
+      </p>
+
       <div class="memories-grid">
         <img src="images/2.jpeg" alt="" />
         <img src="images/28.jpeg" alt="" />
@@ -95,7 +111,27 @@
 
     <!-- 🦋 Footer -->
     <footer>Made with ❤️ for Asha | Forever Yours Rupu</footer>
+    <!-- 🦋 Secret Love Popup -->
+    <div class="secret-popup" id="secretPopup">
+      <div class="secret-box">
+        <span class="close-secret">&times;</span>
+        <p>
+          If you found this, it means you read till the end…<br />
+          <strong>I love you more than words can say 💖</strong>
+        </p>
+      </div>
+    </div>
 
     <script src="script.js"></script>
+    <!-- 🎧 Music Control Button -->
+    <div class="music-control" id="musicControl">
+      <span class="music-icon">🎵</span>
+      <span class="music-text">This song reminds me of you Sona💖</span>
+    </div>
+    <!-- 📸 Image Focus Modal -->
+    <div class="image-modal" id="imageModal">
+      <span class="close-modal">&times;</span>
+      <img id="modalImage" src="" alt="Memory" />
+    </div>
   </body>
 </html>
